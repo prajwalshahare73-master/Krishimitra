@@ -113,6 +113,7 @@ export default function Records({ produceList, salesList, farmer, t }) {
           </div>
 
           <div className="gov-card-body" style={{ padding: 0 }}>
+            <div className="table-scroll-hint">↔ Scroll horizontally to view complete records</div>
             <div className="gov-table-container" style={{ border: "none", borderRadius: 0 }}>
               <table className="gov-table">
                 <thead>

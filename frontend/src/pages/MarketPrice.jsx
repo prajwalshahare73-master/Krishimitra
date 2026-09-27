@@ -115,6 +115,7 @@ export default function MarketPrice({ marketPrices, t }) {
         </div>
 
         <div className="gov-card-body" style={{ padding: 0 }}>
+          <div className="table-scroll-hint">↔ Scroll horizontally to view all mandi price quotes</div>
           <div className="gov-table-container" style={{ border: "none", borderRadius: 0 }}>
             <table className="gov-table">
               <thead>

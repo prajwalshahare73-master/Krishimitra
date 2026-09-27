@@ -67,24 +67,24 @@ export default function Welcome({ t, onTabChange, onLangChange, currentLang }) {
       </div>
 
       {/* 2. Key Portal Operational Statistics (Real-world Agmarknet / e-NAM style) */}
-      <div className="gov-card" style={{ marginTop: "-2.5rem", position: "relative", zIndex: 10, background: "#ffffff", borderColor: "#d7e0db" }}>
-        <div className="gov-card-body" style={{ padding: "1.25rem 1.5rem" }}>
+      <div className="gov-card" style={{ marginTop: "-1.5rem", position: "relative", zIndex: 10, background: "#ffffff", borderColor: "#d7e0db" }}>
+        <div className="gov-card-body" style={{ padding: "1rem" }}>
           <div className="grid-4" style={{ textAlign: "center" }}>
-            <div style={{ borderRight: "1px solid #e6ede9", padding: "0.5rem" }}>
-              <div style={{ fontSize: "1.85rem", fontWeight: 800, color: "var(--color-primary-800)" }}>1,420+</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", fontWeight: 500 }}>Live APMC Mandis Synced</div>
+            <div className="stat-box">
+              <div style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)", fontWeight: 800, color: "var(--color-primary-800)" }}>1,420+</div>
+              <div style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", fontWeight: 500 }}>Live APMC Mandis Synced</div>
             </div>
-            <div style={{ borderRight: "1px solid #e6ede9", padding: "0.5rem" }}>
-              <div style={{ fontSize: "1.85rem", fontWeight: 800, color: "var(--color-amber-700)" }}>₹18.5 Cr+</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", fontWeight: 500 }}>Direct Farmgate Sales</div>
+            <div className="stat-box">
+              <div style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)", fontWeight: 800, color: "var(--color-amber-700)" }}>₹18.5 Cr+</div>
+              <div style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", fontWeight: 500 }}>Direct Farmgate Sales</div>
             </div>
-            <div style={{ borderRight: "1px solid #e6ede9", padding: "0.5rem" }}>
-              <div style={{ fontSize: "1.85rem", fontWeight: 800, color: "var(--color-primary-800)" }}>640+</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", fontWeight: 500 }}>WDRA Cold Storages & Depots</div>
+            <div className="stat-box">
+              <div style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)", fontWeight: 800, color: "var(--color-primary-800)" }}>640+</div>
+              <div style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", fontWeight: 500 }}>WDRA Cold Storages & Depots</div>
             </div>
-            <div style={{ padding: "0.5rem" }}>
-              <div style={{ fontSize: "1.85rem", fontWeight: 800, color: "var(--color-amber-700)" }}>3,200+</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", fontWeight: 500 }}>Verified FPOs & Bulk Buyers</div>
+            <div className="stat-box">
+              <div style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)", fontWeight: 800, color: "var(--color-amber-700)" }}>3,200+</div>
+              <div style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", fontWeight: 500 }}>Verified FPOs & Bulk Buyers</div>
             </div>
           </div>
         </div>

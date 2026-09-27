@@ -118,7 +118,7 @@ export default function Header({
             )}
 
             <button 
-              className="btn btn-accent btn-sm"
+              className="btn btn-accent btn-sm gov-header-add-btn"
               onClick={() => onTabChange("add-produce")}
               title="Add Harvested Produce"
             >

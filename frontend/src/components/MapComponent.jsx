@@ -91,7 +91,7 @@ export default function MapComponent({ facilities, selectedFacility, onSelectFac
   }, [facilities, selectedFacility]);
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "420px", borderRadius: "8px", overflow: "hidden", border: "1px solid var(--color-border)" }}>
+    <div style={{ position: "relative", width: "100%", height: "clamp(260px, 45vh, 420px)", borderRadius: "8px", overflow: "hidden", border: "1px solid var(--color-border)" }}>
       <div ref={mapContainerRef} style={{ width: "100%", height: "100%" }} />
       <div
         style={{
@@ -100,17 +100,20 @@ export default function MapComponent({ facilities, selectedFacility, onSelectFac
           right: "10px",
           zIndex: 999,
           background: "rgba(255, 255, 255, 0.95)",
-          padding: "6px 12px",
+          padding: "4px 8px",
           borderRadius: "6px",
           border: "1px solid #d1d5db",
-          fontSize: "12px",
+          fontSize: "11px",
           fontWeight: "600",
           boxShadow: "0 2px 5px rgba(0,0,0,0.15)",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "6px"
         }}
       >
-        <span style={{ color: "#2563eb", marginRight: "8px" }}>● Cold Storage</span>
-        <span style={{ color: "#d97706", marginRight: "8px" }}>● Processing</span>
-        <span style={{ color: "#059669" }}>● Collection Hub</span>
+        <span style={{ color: "#2563eb" }}>● Storage</span>
+        <span style={{ color: "#d97706" }}>● Process</span>
+        <span style={{ color: "#059669" }}>● Hub</span>
       </div>
     </div>
   );

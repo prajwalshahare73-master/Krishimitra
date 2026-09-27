@@ -40,7 +40,7 @@
   --color-info: #1d4ed8;
   --color-info-bg: #dbeafe;
 
-  /* Typography */
+  /* Typography & Fluid Scaling */
   --font-family: 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
   --font-size-base: 15px;
 
@@ -58,7 +58,7 @@
 }
 
 /* Accessibility Font Scaling */
-html.font-scale-sm { font-size: 14px; }
+html.font-scale-sm { font-size: 13.5px; }
 html.font-scale-md { font-size: 15px; }
 html.font-scale-lg { font-size: 17px; }
 
@@ -66,6 +66,7 @@ html.font-scale-lg { font-size: 17px; }
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-wrap: break-word;
 }
 
 body {
@@ -75,13 +76,42 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fluid Typography across breakpoints */
+h1 {
+  font-size: clamp(1.4rem, 3.5vw + 0.5rem, 2.25rem);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: clamp(1.15rem, 2.5vw + 0.4rem, 1.55rem);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: clamp(1rem, 2vw + 0.3rem, 1.25rem);
+  line-height: 1.35;
+}
+
+p {
+  font-size: clamp(0.85rem, 1.2vw + 0.5rem, 0.95rem);
+  line-height: 1.6;
 }
 
 /* Layout Container */
 .gov-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+@media (max-width: 480px) {
+  .gov-container {
+    padding: 0 0.75rem;
+  }
 }
 
 /* Government Top Utility Bar */
@@ -99,6 +129,14 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .gov-top-bar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
 }
 
 .gov-helpline {
@@ -512,7 +550,7 @@ body {
   border: 1px solid var(--color-border);
 }
 
-/* Grid Utilities */
+/* Grid Utilities - Responsive across all screens */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -531,13 +569,32 @@ body {
   gap: 1rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .grid-3 { grid-template-columns: repeat(1, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-  .grid-2, .grid-4 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .grid-3 { grid-template-columns: 1fr; gap: 0.75rem; }
+  .grid-2 { grid-template-columns: 1fr; gap: 0.75rem; }
+  .gov-card-body { padding: 1rem; }
+  .gov-card-header { padding: 0.85rem 1rem; }
+}
+
+@media (max-width: 380px) {
+  .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* Mobile Touch Targets & Form Responsiveness */
+@media (max-width: 768px) {
+  .form-input, .form-select, .form-textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on mobile iOS/Android */
+    padding: 0.75rem;
+  }
+  .btn {
+    min-height: 44px; /* Accessible touch target size */
+  }
 }
 
 /* Mobile Bottom Navigation */
@@ -552,6 +609,7 @@ body {
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
   z-index: 1000;
   padding: 0.35rem 0;
+  padding-bottom: max(0.4rem, env(safe-area-inset-bottom));
 }
 
 @media (max-width: 768px) {
@@ -564,7 +622,21 @@ body {
     display: none;
   }
   .gov-main-content {
-    padding-bottom: 5rem;
+    padding-bottom: 5.5rem;
+  }
+  
+  .gov-header-inner {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .gov-portal-subtitle {
+    display: none;
+  }
+  
+  .gov-logo-img {
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -579,7 +651,8 @@ body {
   font-size: 0.7rem;
   font-weight: 500;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  padding: 0.35rem 0.5rem;
+  min-width: 50px;
 }
 
 .mobile-nav-btn.active {
@@ -627,6 +700,58 @@ body {
   .gov-footer-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+}
+
+/* Header Add button on small screens */
+@media (max-width: 500px) {
+  .gov-header-add-btn {
+    display: none !important;
+  }
+}
+
+/* Responsive Stat Boxes */
+.stat-box {
+  padding: 0.5rem;
+  border-right: 1px solid var(--color-border-light);
+}
+
+@media (max-width: 1024px) {
+  .stat-box:nth-child(2n) {
+    border-right: none;
+  }
+  .stat-box:nth-child(-n+2) {
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .stat-box {
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: 0.5rem;
+  }
+  .stat-box:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Scroll Hint for Mobile Tables */
+.table-scroll-hint {
+  display: none;
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  padding: 0.35rem 0.75rem;
+  background: #f8faf9;
+  border-bottom: 1px solid var(--color-border-light);
+  text-align: right;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .table-scroll-hint {
+    display: block;
   }
 }
 
