@@ -2,12 +2,13 @@
 > **Right Produce • Right Market • Better Value**
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-AGRINOVA-181717?logo=github)](https://github.com/natuaniruddha14-sketch/AGRINOVA)
-[![Vercel Deployment Ready](https://img.shields.io/badge/Vercel-Ready-000000?logo=vercel)](https://vercel.com)
+[![Vercel Deployment Live](https://img.shields.io/badge/Vercel-Live%20Demo-success?logo=vercel)](https://frontend-theta-drab-ff38ec1d47.vercel.app)
 [![React 19](https://img.shields.io/badge/Frontend-React%2019%20%2B%20Vite-61DAFB?logo=react)](https://react.dev)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%2B%20Python-009688?logo=fastapi)](https://fastapi.tiangolo.com)
 [![e-NAM Compatible](https://img.shields.io/badge/Agri-e--NAM%20Standard-2e7d32)](https://enam.gov.in)
 
-**Repository:** [https://github.com/natuaniruddha14-sketch/AGRINOVA](https://github.com/natuaniruddha14-sketch/AGRINOVA)  
+🌐 **Live Production Web App:** [https://frontend-theta-drab-ff38ec1d47.vercel.app](https://frontend-theta-drab-ff38ec1d47.vercel.app)  
+📁 **GitHub Repository:** [https://github.com/natuaniruddha14-sketch/AGRINOVA](https://github.com/natuaniruddha14-sketch/AGRINOVA)  
 
 AgriSathi is a production-grade, farmer-first digital agriculture platform built according to the **Krishi Mitra PRD specifications** and designed strictly following real-world Indian government agriculture portal standards (such as **e-NAM**, **Agmarknet**, **PM-KISAN**, and the **National Government Services Portal**).
 
