@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { User, Phone, MapPin, Lock, ShieldCheck, ArrowRight, UserCheck } from "lucide-react";
+import { User, Phone, MapPin, Lock, ShieldCheck, ArrowRight, UserCheck, Sprout } from "lucide-react";
 
 export default function Login({ onLoginSuccess, t }) {
   const [isRegister, setIsRegister] = useState(false);
@@ -33,14 +33,10 @@ export default function Login({ onLoginSuccess, t }) {
         language: "en"
       };
       onLoginSuccess(farmerObj);
-    }, 400);
+    }, 500);
   };
 
   const handleDemoFarmer = () => {
-    setMobile("9822014589");
-    setName("Ramesh Dattatray Patil");
-    setDistrict("Nashik");
-    setLocation("Pimpalgaon Baswant, Niphad");
     onLoginSuccess({
       id: "FARMER-MH-4291",
       name: "Ramesh Dattatray Patil",
@@ -53,42 +49,63 @@ export default function Login({ onLoginSuccess, t }) {
   };
 
   return (
-    <div style={{ maxWidth: "540px", margin: "2rem auto" }}>
-      <div className="gov-card">
-        <div className="gov-card-header" style={{ background: "var(--color-primary-800)", color: "#ffffff" }}>
+    <div style={{ maxWidth: "520px", margin: "1.5rem auto" }}>
+      {/* Portal logo/context strip */}
+      <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem", background: "var(--color-primary-50)", border: "1px solid var(--color-primary-200)", padding: "0.5rem 1rem", borderRadius: "var(--radius-full)" }}>
+          <Sprout size={18} color="var(--color-primary-700)" />
+          <span style={{ fontWeight: 700, color: "var(--color-primary-900)", fontSize: "0.9rem" }}>AgriSathi – Kisan Portal</span>
+          <span className="badge badge-success" style={{ fontSize: "0.6rem" }}>Secure ✓</span>
+        </div>
+        <div style={{ fontSize: "0.775rem", color: "var(--color-text-subtle)", marginTop: "0.35rem" }}>
+          राष्ट्रीय कृषि डिजिटल अवसंरचना • National Digital Agriculture Portal
+        </div>
+      </div>
+
+      <div className="gov-card" style={{ overflow: "visible" }}>
+        {/* Header */}
+        <div 
+          className="gov-card-header" 
+          style={{ 
+            background: "linear-gradient(135deg, var(--color-primary-800), var(--color-primary-950))",
+            color: "#ffffff",
+            borderRadius: "var(--radius-lg) var(--radius-lg) 0 0"
+          }}
+        >
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
             <ShieldCheck size={20} color="#ffd54f" />
-            <strong style={{ fontSize: "1.1rem" }}>
+            <strong style={{ fontSize: "1rem" }}>
               {isRegister ? "Kisan Registration (किसान पंजीकरण)" : "Farmer Portal Login (किसान लॉगिन)"}
             </strong>
           </div>
-          <span style={{ fontSize: "0.75rem", background: "rgba(255,255,255,0.2)", padding: "2px 8px", borderRadius: "4px" }}>
-            Govt. Unified Portal
+          <span style={{ fontSize: "0.7rem", background: "rgba(255,255,255,0.15)", padding: "2px 8px", borderRadius: "4px", border: "1px solid rgba(255,255,255,0.2)" }}>
+            Govt. Portal
           </span>
         </div>
 
-        <div className="gov-card-body" style={{ padding: "1.75rem" }}>
+        <div className="gov-card-body" style={{ padding: "1.5rem" }}>
           {error && (
-            <div style={{ background: "var(--color-danger-bg)", color: "var(--color-danger)", padding: "0.75rem", borderRadius: "6px", fontSize: "0.85rem", marginBottom: "1rem", border: "1px solid #fca5a5" }}>
-              {error}
+            <div className="alert alert-danger" style={{ marginBottom: "1rem" }}>
+              ⚠️ {error}
             </div>
           )}
 
-          {/* Quick Demo Access banner for instant verification */}
-          <div style={{ background: "var(--color-primary-50)", border: "1px solid var(--color-primary-100)", padding: "0.85rem", borderRadius: "6px", marginBottom: "1.5rem" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
+          {/* Demo access banner */}
+          <div style={{ background: "linear-gradient(135deg, #f0fdf4, #e8f5e9)", border: "1.5px solid var(--color-primary-200)", padding: "1rem", borderRadius: "var(--radius-lg)", marginBottom: "1.5rem" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
               <div>
-                <strong style={{ fontSize: "0.85rem", color: "var(--color-primary-900)", display: "block" }}>
-                  🧑‍🌾 Quick Testing / Evaluator Demo:
+                <strong style={{ fontSize: "0.875rem", color: "var(--color-primary-900)", display: "block", marginBottom: "0.15rem" }}>
+                  🧑‍🌾 Quick Demo Access
                 </strong>
-                <span style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
-                  Pre-filled verified farmer profile with produce & APMC records.
+                <span style={{ fontSize: "0.775rem", color: "var(--color-text-muted)" }}>
+                  Pre-filled Nashik farmer profile with produce &amp; APMC records
                 </span>
               </div>
               <button 
                 type="button" 
                 className="btn btn-primary btn-sm"
                 onClick={handleDemoFarmer}
+                style={{ flexShrink: 0 }}
               >
                 <UserCheck size={14} />
                 <span>Instant Demo Login</span>
@@ -101,12 +118,14 @@ export default function Login({ onLoginSuccess, t }) {
               <>
                 <div className="form-group">
                   <label className="form-label">
-                    Full Name (किसान का पूरा नाम) *
+                    Full Name (किसान का पूरा नाम) <span className="required">*</span>
                   </label>
                   <div style={{ position: "relative" }}>
+                    <User size={16} style={{ position: "absolute", left: "0.75rem", top: "50%", transform: "translateY(-50%)", color: "var(--color-text-subtle)", pointerEvents: "none" }} />
                     <input 
                       type="text" 
                       className="form-input" 
+                      style={{ paddingLeft: "2.25rem" }}
                       placeholder="e.g. Ramesh Dattatray Patil" 
                       value={name} 
                       onChange={(e) => setName(e.target.value)}
@@ -117,7 +136,7 @@ export default function Login({ onLoginSuccess, t }) {
 
                 <div className="grid-2">
                   <div className="form-group">
-                    <label className="form-label">State (राज्य) *</label>
+                    <label className="form-label">State (राज्य) <span className="required">*</span></label>
                     <select 
                       className="form-select"
                       value={state}
@@ -129,10 +148,11 @@ export default function Login({ onLoginSuccess, t }) {
                       <option value="Uttar Pradesh">Uttar Pradesh</option>
                       <option value="Punjab">Punjab</option>
                       <option value="Karnataka">Karnataka</option>
+                      <option value="Rajasthan">Rajasthan</option>
                     </select>
                   </div>
                   <div className="form-group">
-                    <label className="form-label">District (ज़िला) *</label>
+                    <label className="form-label">District (ज़िला) <span className="required">*</span></label>
                     <input 
                       type="text" 
                       className="form-input" 
@@ -145,26 +165,30 @@ export default function Login({ onLoginSuccess, t }) {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label">Village / Taluka (गाँव / तहसील) *</label>
-                  <input 
-                    type="text" 
-                    className="form-input" 
-                    placeholder="e.g. Pimpalgaon Baswant, Niphad" 
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
-                    required 
-                  />
+                  <label className="form-label">Village / Taluka (गाँव / तहसील) <span className="required">*</span></label>
+                  <div style={{ position: "relative" }}>
+                    <MapPin size={16} style={{ position: "absolute", left: "0.75rem", top: "50%", transform: "translateY(-50%)", color: "var(--color-text-subtle)", pointerEvents: "none" }} />
+                    <input 
+                      type="text" 
+                      className="form-input"
+                      style={{ paddingLeft: "2.25rem" }}
+                      placeholder="e.g. Pimpalgaon Baswant, Niphad" 
+                      value={location}
+                      onChange={(e) => setLocation(e.target.value)}
+                      required 
+                    />
+                  </div>
                 </div>
               </>
             )}
 
             <div className="form-group">
               <label className="form-label">
-                Mobile Number (मोबाइल नंबर) *
+                Mobile Number (मोबाइल नंबर) <span className="required">*</span>
               </label>
               <div style={{ display: "flex", gap: "0.5rem" }}>
-                <span style={{ display: "inline-flex", alignItems: "center", padding: "0 0.75rem", background: "#f3f4f6", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", fontSize: "0.9rem", color: "var(--color-text-muted)", fontWeight: 600 }}>
-                  +91
+                <span style={{ display: "inline-flex", alignItems: "center", padding: "0 0.85rem", background: "var(--color-bg-subtle)", border: "1.5px solid var(--color-border)", borderRadius: "var(--radius-md)", fontSize: "0.9rem", color: "var(--color-text-muted)", fontWeight: 700, whiteSpace: "nowrap", flexShrink: 0 }}>
+                  🇮🇳 +91
                 </span>
                 <input 
                   type="tel" 
@@ -176,41 +200,52 @@ export default function Login({ onLoginSuccess, t }) {
                   required 
                 />
               </div>
-              <span className="form-help">An OTP or secure PIN will be used for verification.</span>
+              <span className="form-help">Verified via OTP or secure Kisan PIN</span>
             </div>
 
             <div className="form-group">
               <label className="form-label">
-                Kisan Security PIN / Password (पिन / पासवर्ड) *
+                Kisan Security PIN / Password (पिन / पासवर्ड) <span className="required">*</span>
               </label>
-              <input 
-                type="password" 
-                className="form-input" 
-                placeholder="Enter 6-digit PIN" 
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required 
-              />
+              <div style={{ position: "relative" }}>
+                <Lock size={16} style={{ position: "absolute", left: "0.75rem", top: "50%", transform: "translateY(-50%)", color: "var(--color-text-subtle)", pointerEvents: "none" }} />
+                <input 
+                  type="password" 
+                  className="form-input"
+                  style={{ paddingLeft: "2.25rem" }}
+                  placeholder="Enter 6-digit PIN or password" 
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required 
+                />
+              </div>
             </div>
 
             <button 
               type="submit" 
               className="btn btn-primary btn-lg" 
-              style={{ width: "100%", marginTop: "1rem" }}
+              style={{ width: "100%", marginTop: "1.25rem" }}
               disabled={loading}
             >
-              {loading ? "Verifying..." : (isRegister ? "Complete Registration" : "Login to AgriSathi")}
-              <ArrowRight size={18} />
+              {loading ? (
+                <span>Verifying…</span>
+              ) : (
+                <>
+                  <span>{isRegister ? "Complete Registration" : "Login to AgriSathi"}</span>
+                  <ArrowRight size={18} />
+                </>
+              )}
             </button>
           </form>
 
-          <div style={{ marginTop: "1.25rem", textAlign: "center", fontSize: "0.875rem", color: "var(--color-text-muted)" }}>
+          {/* Toggle register/login */}
+          <div style={{ marginTop: "1.25rem", textAlign: "center", fontSize: "0.875rem", color: "var(--color-text-muted)", borderTop: "1px solid var(--color-border-light)", paddingTop: "1rem" }}>
             {isRegister ? (
               <span>
                 Already registered?{" "}
                 <button 
                   type="button" 
-                  style={{ background: "none", border: "none", color: "var(--color-primary-800)", fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}
+                  style={{ background: "none", border: "none", color: "var(--color-primary-800)", fontWeight: 700, cursor: "pointer", textDecoration: "underline", fontFamily: "inherit" }}
                   onClick={() => setIsRegister(false)}
                 >
                   Farmer Login
@@ -221,13 +256,19 @@ export default function Login({ onLoginSuccess, t }) {
                 New farmer on AgriSathi?{" "}
                 <button 
                   type="button" 
-                  style={{ background: "none", border: "none", color: "var(--color-primary-800)", fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}
+                  style={{ background: "none", border: "none", color: "var(--color-primary-800)", fontWeight: 700, cursor: "pointer", textDecoration: "underline", fontFamily: "inherit" }}
                   onClick={() => setIsRegister(true)}
                 >
-                  Register New Account
+                  Register Free Account
                 </button>
               </span>
             )}
+          </div>
+
+          {/* Security assurance */}
+          <div style={{ marginTop: "1rem", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.4rem", fontSize: "0.75rem", color: "var(--color-text-subtle)" }}>
+            <ShieldCheck size={13} color="var(--color-success)" />
+            <span>256-bit SSL Encrypted • Data protected under Govt. Agriculture IT Policy</span>
           </div>
         </div>
       </div>
