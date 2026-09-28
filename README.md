@@ -1,4 +1,4 @@
-# AgriSathi – Smart Agriculture Produce Management Platform (AGRINOVA) 🌾
+# KrishiMitra – Smart Agriculture Produce Management Platform (AGRINOVA) 🌾
 > **Right Produce • Right Market • Better Value**
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-AGRINOVA-181717?logo=github)](https://github.com/natuaniruddha14-sketch/AGRINOVA)
@@ -10,7 +10,7 @@
 🌐 **Live Production Web App:** [https://frontend-theta-drab-ff38ec1d47.vercel.app](https://frontend-theta-drab-ff38ec1d47.vercel.app)  
 📁 **GitHub Repository:** [https://github.com/natuaniruddha14-sketch/AGRINOVA](https://github.com/natuaniruddha14-sketch/AGRINOVA)  
 
-AgriSathi is a production-grade, farmer-first digital agriculture platform built according to the **Krishi Mitra PRD specifications** and designed strictly following real-world Indian government agriculture portal standards (such as **e-NAM**, **Agmarknet**, **PM-KISAN**, and the **National Government Services Portal**).
+KrishiMitra is a production-grade, farmer-first digital agriculture platform built according to the **Krishi Mitra PRD specifications** and designed strictly following real-world Indian government agriculture portal standards (such as **e-NAM**, **Agmarknet**, **PM-KISAN**, and the **National Government Services Portal**).
 
 The platform deliberately avoids generic AI/SaaS startup clichés (no neon glows, no excessive glassmorphism, no meaningless floating gradients) and delivers a clean, practical, accessible interface tailored for Indian farmers, FPOs, and agricultural traders.
 

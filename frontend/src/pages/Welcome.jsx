@@ -144,7 +144,7 @@ export default function Welcome({ t, onTabChange, onLangChange, currentLang }) {
         </div>
         <div className="gov-card-body">
           <p style={{ fontSize: "0.875rem", color: "var(--color-text-muted)", marginBottom: "1.25rem", lineHeight: 1.6 }}>
-            AgriSathi unifies every critical phase of agricultural post-harvest marketing into one structured, transparent process:
+            {t.portalName} unifies every critical phase of agricultural post-harvest marketing into one structured, transparent process:
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.75rem" }}>
             {WORKFLOW_STEPS.map((step, i) => (

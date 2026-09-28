@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    portalName: "AgriSathi",
+    portalName: "KrishiMitra",
     portalSubtitle: "Smart Agriculture Produce Management Platform",
     tagline: "Right Produce • Right Market • Better Value",
     govtInitiative: "National Agricultural Digital Services Portal",
@@ -98,10 +98,10 @@ export const translations = {
     submitFeedback: "Submit Feedback",
     rating: "Rating",
     comment: "Your Comments / Experience",
-    footerText: "AgriSathi is an independent, farmer-first digital public infrastructure platform adhering to Indian Agriculture data standards."
+    footerText: "KrishiMitra is an independent, farmer-first digital public infrastructure platform adhering to Indian Agriculture data standards."
   },
   hi: {
-    portalName: "कृषिसाथी",
+    portalName: "कृषिमित्र",
     portalSubtitle: "स्मार्ट कृषि उपज प्रबंधन एवं विपणन मंच",
     tagline: "सही उपज • सही मंडी • बेहतर दाम",
     govtInitiative: "राष्ट्रीय डिजिटल कृषि सेवा पोर्टल",
@@ -199,10 +199,10 @@ export const translations = {
     submitFeedback: "सुझाव दर्ज करें",
     rating: "रेटिंग",
     comment: "अपनी राय लिखें",
-    footerText: "कृषिसाथी भारतीय किसानों को उपज का सही मूल्य दिलाने हेतु समर्पित एक पारदर्शी डिजिटल मंच है।"
+    footerText: "कृषिमित्र भारतीय किसानों को उपज का सही मूल्य दिलाने हेतु समर्पित एक पारदर्शी डिजिटल मंच है।"
   },
   mr: {
-    portalName: "कृषीसाथी",
+    portalName: "कृषिमित्र",
     portalSubtitle: "स्मार्ट शेतीमाल व्यवस्थापन व विपणन व्यासपीठ",
     tagline: "योग्य शेतीमाल • योग्य बाजारपेठ • उत्तम दर",
     govtInitiative: "राष्ट्रीय डिजिटल कृषी सेवा पोर्टल",
@@ -300,6 +300,6 @@ export const translations = {
     submitFeedback: "अभिप्राय नोंदवा",
     rating: "रेटिंग",
     comment: "तुमचे मत लिहा",
-    footerText: "कृषीसाथी हे महाराष्ट्रातील व देशातील शेतकऱ्यांच्या शेतीमालाला योग्य भाव मिळवून देण्यासाठी कटिबद्ध व्यासपीठ आहे."
+    footerText: "कृषिमित्र हे महाराष्ट्रातील व देशातील शेतकऱ्यांच्या शेतीमालाला योग्य भाव मिळवून देण्यासाठी कटिबद्ध व्यासपीठ आहे."
   }
 };

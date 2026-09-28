@@ -20,8 +20,8 @@ from app.data import (
 )
 
 app = FastAPI(
-    title="AgriSathi Backend API",
-    description="Backend services for AgriSathi – Smart Agriculture Produce Management Platform",
+    title="KrishiMitra Backend API",
+    description="Backend services for KrishiMitra – Smart Agriculture Produce Management Platform",
     version="1.0.0"
 )
 
@@ -56,7 +56,7 @@ current_farmer_mobile = INITIAL_FARMER["mobile"]
 def read_root():
     return {
         "success": True,
-        "app": "AgriSathi – Smart Agriculture Produce Management Platform",
+        "app": "KrishiMitra – Smart Agriculture Produce Management Platform",
         "status": "online",
         "version": "1.0.0",
         "documentation": "/docs"
@@ -439,7 +439,7 @@ def accept_deal(negotiation_id: str):
     neg["messages"].append({
         "id": f"MSG-{uuid.uuid4().hex[:4]}",
         "senderRole": "system",
-        "senderName": "AgriSathi Settlement Bot",
+        "senderName": "KrishiMitra Settlement Bot",
         "message": f"🎉 Deal confirmed! Agreed price: ₹{agreed_price:,.0f}/Quintal for {neg['offeredQuantity']} Quintals. Proceeding to in-app payment lock.",
         "offerPrice": agreed_price,
         "offerQuantity": neg["offeredQuantity"],

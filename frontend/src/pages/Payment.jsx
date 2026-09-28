@@ -145,7 +145,7 @@ export default function Payment({
                   />
                   <div>
                     <strong style={{ display: "block", fontSize: "0.95rem", color: "var(--color-primary-900)" }}>
-                      🛡️ AgriSathi Smart Escrow Guarantee (Recommended)
+                      🛡️ KrishiMitra Smart Escrow Guarantee (Recommended)
                     </strong>
                     <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>
                       Buyer funds are locked in designated escrow. Released automatically upon produce weighment at gate.
@@ -257,10 +257,10 @@ export default function Payment({
             <div style={{ padding: "2rem", borderBottom: "2px solid #143e18" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "1rem" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                  <img src="/logo-leaf.svg" alt="AgriSathi Emblem" style={{ width: "48px", height: "48px" }} />
+                  <img src="/logo.png" alt="KrishiMitra Emblem" style={{ width: "48px", height: "48px", objectFit: "contain", borderRadius: "6px" }} />
                   <div>
                     <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "var(--color-primary-900)", lineHeight: 1.1 }}>
-                      AgriSathi Digital Settlement Slip
+                      KrishiMitra Digital Settlement Slip
                     </h2>
                     <span style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
                       National Agricultural Produce Trade & Settlement Act Compliant
@@ -348,7 +348,7 @@ export default function Payment({
                   <QrCode size={40} color="#1b5e20" />
                   <div style={{ fontSize: "0.75rem", color: "var(--color-text-subtle)" }}>
                     Digital Seal Verified<br />
-                    Scan to verify on e-NAM / AgriSathi
+                    Scan to verify on e-NAM / KrishiMitra
                   </div>
                 </div>
               </div>

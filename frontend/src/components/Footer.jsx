@@ -8,7 +8,7 @@ export default function Footer({ t, onTabChange }) {
         <div className="gov-footer-grid">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.85rem" }}>
-              <img src="/logo-leaf.svg" alt="AgriSathi Logo" style={{ width: "32px", height: "32px" }} />
+              <img src="/logo.png" alt="KrishiMitra Logo" style={{ width: "36px", height: "36px", objectFit: "contain", borderRadius: "6px" }} />
               <strong style={{ fontSize: "1.2rem", color: "#ffffff" }}>{t.portalName}</strong>
             </div>
             <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#cbd5e1", marginBottom: "1rem" }}>
@@ -85,7 +85,7 @@ export default function Footer({ t, onTabChange }) {
 
         <div className="gov-footer-bottom">
           <div>
-            © {new Date().getFullYear()} AgriSathi – Smart Agriculture Produce Management Platform. Designed for Indian Farmers.
+            © {new Date().getFullYear()} {t.portalName} – Smart Agriculture Produce Management Platform. Designed for Indian Farmers.
           </div>
           <div>
             Adheres to National e-Governance Agriculture Guidelines • Mobile First • Accessible

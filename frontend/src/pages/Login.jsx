@@ -53,8 +53,8 @@ export default function Login({ onLoginSuccess, t }) {
       {/* Portal logo/context strip */}
       <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem", background: "var(--color-primary-50)", border: "1px solid var(--color-primary-200)", padding: "0.5rem 1rem", borderRadius: "var(--radius-full)" }}>
-          <Sprout size={18} color="var(--color-primary-700)" />
-          <span style={{ fontWeight: 700, color: "var(--color-primary-900)", fontSize: "0.9rem" }}>AgriSathi – Kisan Portal</span>
+          <img src="/logo.png" alt="KrishiMitra" style={{ width: "20px", height: "20px", objectFit: "contain" }} />
+          <span style={{ fontWeight: 700, color: "var(--color-primary-900)", fontSize: "0.9rem" }}>KrishiMitra – Kisan Portal</span>
           <span className="badge badge-success" style={{ fontSize: "0.6rem" }}>Secure ✓</span>
         </div>
         <div style={{ fontSize: "0.775rem", color: "var(--color-text-subtle)", marginTop: "0.35rem" }}>
@@ -231,7 +231,7 @@ export default function Login({ onLoginSuccess, t }) {
                 <span>Verifying…</span>
               ) : (
                 <>
-                  <span>{isRegister ? "Complete Registration" : "Login to AgriSathi"}</span>
+                  <span>{isRegister ? "Complete Registration" : "Login to KrishiMitra"}</span>
                   <ArrowRight size={18} />
                 </>
               )}
@@ -253,7 +253,7 @@ export default function Login({ onLoginSuccess, t }) {
               </span>
             ) : (
               <span>
-                New farmer on AgriSathi?{" "}
+                New farmer on KrishiMitra?{" "}
                 <button 
                   type="button" 
                   style={{ background: "none", border: "none", color: "var(--color-primary-800)", fontWeight: 700, cursor: "pointer", textDecoration: "underline", fontFamily: "inherit" }}

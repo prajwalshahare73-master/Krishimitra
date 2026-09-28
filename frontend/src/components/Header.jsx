@@ -75,9 +75,10 @@ export default function Header({
             onClick={() => onTabChange("welcome")}
           >
             <img 
-              src="/logo-leaf.svg" 
-              alt="AgriSathi Emblem" 
+              src="/logo.png" 
+              alt="KrishiMitra Emblem" 
               className="gov-logo-img" 
+              style={{ objectFit: "contain", borderRadius: "8px" }}
             />
             <div className="gov-brand-titles">
               <span className="gov-portal-title">{t.portalName}</span>
