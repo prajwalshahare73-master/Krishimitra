@@ -1,5 +1,4 @@
 # KrishiMitra – Smart Agriculture Produce Management Platform (AGRINOVA) 🌾
-<br>
 **DEMO VIDEO:**[https://youtu.be/aE4JIfgWbts?si=h4IyhyDbsOfrATiK]
 > **Right Produce • Right Market • Better Value**
 
