@@ -1,6 +1,5 @@
 # KrishiMitra – Smart Agriculture Produce Management Platform (AGRINOVA) 🌾
 <br>
-🌐 **Live Production Web App:** [https://frontend-theta-drab-ff38ec1d47.vercel.app](https://frontend-theta-drab-ff38ec1d47.vercel.app)
 **DEMO VIDEO:**[https://youtu.be/aE4JIfgWbts?si=h4IyhyDbsOfrATiK]
 > **Right Produce • Right Market • Better Value**
 
